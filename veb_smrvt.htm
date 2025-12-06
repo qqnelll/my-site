@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Путь Саморазвития</title>
+<style>
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #c3cfe2, #2662bb, #8099e2);
+  background-size: 300% 300%;
+  animation: bgMove 12s ease infinite;
+  color: #2d2d2d;
+}
+header {
+  background: linear-gradient(90deg, #7471ce, #494cb0);
+  color: #fff;
+  padding: 45px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  animation: fadeDown 1.2s ease forwards;
+  opacity: 0;
+}
+header h1 {
+  font-size: 2.6em;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  animation: fadeIn 1.8s ease forwards;
+  opacity: 0;
+}
+#changing-text {
+  opacity: 0;
+  font-size: 1.1em;
+  transition: 0.6s ease;
+  animation: fadeIn 2.4s ease forwards;
+}
+nav {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  gap: 8px;
+  padding: 10px 0;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+nav a {
+  color: #4338ca;
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+nav a:hover {
+  background-color: #ede9fe;
+  color: #1e3a8a;
+  transform: translateY(-3px);
+}
+main {
+  padding: 50px 15%;
+  animation: fadeIn 2.4s ease forwards;
+  opacity: 0;
+}
+h2 {
+  color: #4338ca;
+  margin-top: 50px;
+  font-size: 1.6em;
+}
+ul, dl {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  animation: slideUp 1.4s ease forwards;
+  opacity: 0;
+}
+ul:hover, dl:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+ul li {
+  margin: 12px 0;
+}
+dt {
+  font-weight: 700;
+  color: #4f46e5;
+}
+dd {
+  margin-bottom: 12px;
+}
+.map-image {
+  display: block;
+  margin: 50px auto;
+  max-width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+  animation: fadeIn 3s ease forwards;
+  opacity: 0;
+}
+.map-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+footer {
+  background-color: #1e1b4b;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  font-size: 0.95em;
+  animation: fadeIn 3.4s ease forwards;
+  opacity: 0;
+}
+</style></head>
+<body>
+<header>
+  <h1>Путь Саморазвития</h1>
+  <p id="changing-text">Стань лучшей версией себя каждый день</p>
+</header>
+<nav>
+  <a href="veb_o_nas.htm" target="_blank">О нас</a>
+  <a href="veb_kontakty.htm" target="_blank">Контакты</a>
+  <a href="veb_chellendzhi.htm" target="_blank">Челленджи</a>
+  <a href="veb_sovety.htm" target="_blank">Советы</a>
+  <a href="veb_vhod.htm" style="margin-left:auto; font-weight:700; color:#4338ca;" target="_blank">Вход</a>
+  <a href="veb_registratsiya.htm" target="_blank">Регистрация</a>
+</nav>
+<main>
+  <h2>Что поможет тебе развиваться:</h2>
+  <ul>
+    <li>Чтение и анализ полезных книг</li>
+    <li>Осознанность и медитация</li>
+    <li>Постановка целей и привычек</li>
+    <li>Баланс между умом и телом</li>
+  </ul>
+  <h2>Основные термины:</h2>
+  <dl>
+    <dt>Самоанализ</dt>
+    <dd>Понимание своих поступков, мыслей и эмоций для личного роста.</dd>
+    <dt>Эмпатия</dt>
+    <dd>Умение чувствовать состояние других и реагировать с добротой.</dd>
+    <dt>Мотивация</dt>
+    <dd>Внутренний источник энергии, который движет тебя к развитию.</dd>
+  </dl>
+  <h2>Исследуй свой путь:</h2>
+  <img src="c:\Users\User01\Downloads\загруженно.jpg" alt="Карта саморазвития" usemap="#selfmap" class="map-image">
+  <map name="selfmap">
+    <area shape="default" href="veb_celi_i_planirovanie.htm" target="_blank">
+  </map>
+</main>
+<footer>
+  © 2025 Путь Саморазвития | Все права защищены
+</footer>
+<script>
+let phrases = [
+  "Стань лучшей версией себя каждый день",
+  "Маленькие шаги → большие изменения",
+  "Ты можешь больше, чем думаешь",
+  "Главное — не скорость, а направление"
+];
+let i = 0;
+setInterval(() => {
+  let text = document.getElementById("changing-text");
+  i = (i + 1) % phrases.length;
+  text.style.opacity = 0;
+  setTimeout(() => {
+    text.textContent = phrases[i];
+    text.style.opacity = 1;
+  }, 400);
+}, 4000);
+</script>
+</body>
+</html>
