@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Челленджи</title>
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #c3cfe2, #2662bb);
+  color: #2d2d2d;
+}
+header {
+  background: linear-gradient(90deg, #7471ce, #494cb0);
+  color: #fff;
+  padding: 45px 20px;
+  text-align: center;
+  animation: fadeHeader 1s ease;
+}
+@keyframes fadeHeader {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+nav {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+nav a {
+  color: #4338ca;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+nav a:hover {
+  background-color: #ede9fe;
+  color: #1e3a8a;
+}
+main {
+  padding: 50px 10%;
+  animation: fadeMain 1s ease;
+}
+@keyframes fadeMain {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.filter-buttons button {
+  background: #4338ca;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.filter-buttons button:hover {
+  background: #5b4ff1;
+  transform: scale(1.05);
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
+  display: none;
+}
+th, td {
+  padding: 18px;
+  text-align: center;
+  width: 33%;
+}
+th {
+  background: rgba(255,255,255,0.6);
+  color: #4338ca;
+  font-size: 18px;
+}
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.2);
+}
+footer {
+  background-color: #1e1b4b;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  animation: fadeFooter 1s ease;
+}
+@keyframes fadeFooter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style></head>
+<body>
+<header><h1>Челленджи развития</h1></header>
+<nav>
+  <a href="veb_smrvt.htm">Главная</a>
+  <a href="veb_o_nas.htm" target="_blank">О нас</a>
+  <a href="veb_vhod.htm" style="margin-left:auto" target="_blank">Вход</a>
+  <a href="veb_registratsiya.htm" target="_blank">Регистрация</a>
+</nav>
+<main>
+<h2 align="center">Выбери направление развития</h2>
+<div class="filter-buttons">
+  <button onclick="showTable('mind')">Для ума</button>
+  <button onclick="showTable('health')">Для здоровья</button>
+  <button onclick="showTable('discipline')">Для дисциплины</button>
+</div>
+<table id="mind">
+<tr><th>Челлендж</th><th>Длительность</th><th>Цель</th></tr>
+<tr><td>Чтение 20 минут в день</td><td>30 дней</td><td>Развитие ума</td></tr>
+<tr><td>Изучение новых слов (5 слов в день)</td><td>21 день</td><td>Расширение словарного запаса</td></tr>
+<tr><td>1 обучающее видео в день</td><td>14 дней</td><td>Расширение кругозора</td></tr>
+<tr><td>Учить навык по 15 минут в день</td><td>30 дней</td><td>Прокачка навыков</td></tr>
+<tr><td>Ведение дневника идей</td><td>14 дней</td><td>Развитие творческого мышления</td></tr>
+</table>
+<table id="health">
+<tr><th>Челлендж</th><th>Длительность</th><th>Цель</th></tr>
+<tr><td>Медитация перед сном</td><td>14 дней</td><td>Спокойствие</td></tr>
+<tr><td>10 000 шагов в день</td><td>21 день</td><td>Физическая активность</td></tr>
+<tr><td>Пить 1,5–2 литра воды</td><td>30 дней</td><td>Здоровье</td></tr>
+<tr><td>Растяжка 10 минут утром</td><td>21 день</td><td>Гибкость</td></tr>
+<tr><td>ЗОЖ-завтрак каждый день</td><td>14 дней</td><td>Правильное питание</td></tr>
+</table>
+<table id="discipline">
+<tr><th>Челлендж</th><th>Длительность</th><th>Цель</th></tr>
+<tr><td>Отказ от соцсетей вечером</td><td>21 день</td><td>Дисциплина</td></tr>
+<tr><td>Подъём на 1 час раньше</td><td>14 дней</td><td>Формирование режима</td></tr>
+<tr><td>Планирование дня утром</td><td>30 дней</td><td>Организованность</td></tr>
+<tr><td>Одна полезная привычка в день</td><td>21 день</td><td>Стабильность</td></tr>
+<tr><td>30 минут без телефона после пробуждения</td><td>14 дней</td><td>Самоконтроль</td></tr>
+</table>
+</main>
+<footer>© 2025 Путь Саморазвития</footer>
+<script>
+function showTable(id) {
+  const tables = ["mind", "health", "discipline"];
+  tables.forEach(t => {
+    document.getElementById(t).style.display = "none";
+  });
+  const table = document.getElementById(id);
+  table.style.display = "table";
+  table.style.animation = "fadeSlide 0.6s ease";
+}
+</script>
+</body>
+</html>
