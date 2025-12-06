@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практики осознанности</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #c3cfe2, #2662bb);
+      color: #2d2d2d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background: linear-gradient(90deg, #7471ce, #494cb0);
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+      font-size: 26px;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      background-size: 400% 400%;
+      animation: headerGradient 8s ease infinite;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s forwards 0.3s;
+    }
+    @keyframes headerGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    nav {
+      background-color: #ffffffcc;
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      gap: 8px;
+      padding: 10px 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s forwards 0.5s;
+    }
+    nav a {
+      color: #4338ca;
+      display: inline-block;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #ede9fe;
+      color: #1e3a8a;
+    }
+    .content {
+      width: 80%;
+      max-width: 900px;
+      margin: 50px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideUp 0.8s forwards;
+    }
+    .card:nth-child(1){ animation-delay: 0.6s; }
+    .card:nth-child(2){ animation-delay: 0.8s; }
+    .card:nth-child(3){ animation-delay: 1s; }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      background: rgba(255, 255, 255, 0.5);
+    }
+    h2 {
+      color: #4338ca;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    button {
+      background: linear-gradient(90deg, #6d28d9, #2563eb);
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    button:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+    audio {
+      margin-top: 15px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 25px;
+      background: #1e1b4b;
+      color: #fff;
+      margin-top: 60px;
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s forwards 1.2s;
+    }
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header {
+        font-size: 22px;
+        padding: 25px;
+      }
+      .content {
+        width: 90%;
+      }
+    }
+  </style></head>
+<body>
+  <header><h1>Практики осознанности</h1></header>
+  <nav>
+    <a href="veb_smrvt.htm" target="_blank">Главная</a>
+    <a href="veb_o_nas.htm" target="_blank">О нас</a>
+    <a href="#" target="_blank">Контакты</a>
+    <a href="veb_vhod.htm" style="margin-left:auto; font-weight:700; color:#4338ca;" target="_blank">Вход</a>
+    <a href="veb_registratsiya.htm" target="_blank">Регистрация</a>
+  </nav>
+  <div class="content">
+    <div class="card">
+      <h2>1. Дыхание 4-7-8</h2>
+      <p>Вдохните через нос на 4 счёта, задержите дыхание на 7 счётов и медленно выдохните через рот на 8 счётов. Повторите 4 раза.</p>
+      <button onclick="alert('Вдох… Задержка… Выдох… Отлично!')">Попробовать</button>
+    </div>
+    <div class="card">
+      <h2>2. Осознанное наблюдение</h2>
+      <p>Выберите предмет вокруг вас и наблюдайте за ним в течение минуты. Заметьте все его детали, форму, цвет, текстуру. Это помогает вернуть внимание в настоящий момент.</p>
+    </div>
+    <div class="card">
+      <h2>3. Короткая медитация</h2>
+      <p>Закройте глаза, сделайте 3 глубоких вдоха. Представьте мягкий свет, заполняющий ваше тело и приносящий спокойствие. Поблагодарите себя за этот момент.</p>
+      <audio controls>
+        <source src="c:\Users\User01\Downloads\bensound-endo.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудиоэлемент.
+      </audio>
+    </div>
+  </div>
+  <footer>© 2025 Путь Саморазвития | Саморазвитие начинается с осознанности</footer>
+</body>
+</html>
