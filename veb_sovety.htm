@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Советы по Саморазвитию</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #7c89e2, #4553a5);
+    color: #fff;
+    padding-bottom: 60px;
+    animation: fadeStart 1.2s ease;
+  }
+  @keyframes fadeStart {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  header {
+    background: linear-gradient(90deg, #7471ce, #494cb0);
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    font-size: 26px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  nav {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  nav a {
+    color: #4338ca;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    background-color: #ede9fe;
+    color: #1e3a8a;
+  }
+  main {
+    padding: 40px 12%;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .advice-box {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    animation: fadeIn 0.6s ease both;
+  }
+  @keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+  .random-btn {
+    margin: 20px auto 35px auto;
+    display: block;
+    padding: 12px 22px;
+    background: linear-gradient(90deg, #6d28d9, #2563eb);
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .random-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1b4b;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<header><h1>Советы по саморазвитию</h1></header>
+<nav>
+  <a href="veb_smrvt.htm">Главная</a>
+  <a href="veb_o_nas.htm">О нас</a>
+  <a href="veb_chellendzhi.htm">Челленджи</a>
+  <a href="veb_vhod.htm" style="margin-left:auto; font-weight:700;">Вход</a>
+  <a href="veb_registratsiya.htm">Регистрация</a>
+</nav>
+<main>
+<h1>Подборка полезных советов</h1>
+<button class="random-btn" id="randomAdviceBtn">Получить случайный совет</button>
+<div id="adviceContainer"></div>
+</main>
+<footer>© 2025 Путь Саморазвития</footer>
+<script>
+let adviceObjects = [
+  {
+    title: "Начни с маленьких шагов",
+    text: "Выбери одну маленькую привычку и выполняй её каждый день."
+  },
+  {
+    title: "Следи за своим прогрессом",
+    text: "Записывай маленькие победы. Это укрепляет уверенность."
+  },
+  {
+    title: "Осознанность",
+    text: "Пробуй каждый день уделить 2–3 минуты дыханию и тишине."
+  },
+  {
+    title: "Точное планирование",
+    text: "Чем яснее цель, тем легче мозг понимает, куда идти."
+  },
+  {
+    title: "Анализ мыслей",
+    text: "Короткие записи помогают отслеживать паттерны мышления."
+  }
+];
+let container = document.getElementById("adviceContainer");
+function renderAdvices() {
+  container.innerHTML = "";
+  for (let i = 0; i < adviceObjects.length; i++) {
+    container.innerHTML += `
+      <div class="advice-box">
+        <h2>${adviceObjects[i].title}</h2>
+        <p>${adviceObjects[i].text}</p>
+      </div>
+    `;
+  }
+}
+renderAdvices();
+let randomBtn = document.getElementById("randomAdviceBtn");
+randomBtn.addEventListener("click", () => {
+  let index = Math.floor(Math.random() * adviceObjects.length);
+  
+  alert(
+    adviceObjects[index].title + "\n\n" +
+    adviceObjects[index].text
+  );
+});
+</script>
+</body>
+</html>
