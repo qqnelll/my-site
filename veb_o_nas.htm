@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>О нас | Путь Саморазвития</title>
+<style>
+:root{
+--purple-1:#6366f1;
+--purple-2:#7c3aed;
+--bg-1:#c7d2fe;
+--bg-2:#e0e7ff;
+--card-bg: rgba(255,255,255,0.45);
+--text:#2d2d2d;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+color:var(--text);
+background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+header{
+position:relative;
+padding:56px 20px 36px;
+text-align:center;
+color:#fff;
+background: linear-gradient(135deg,var(--purple-1),var(--purple-2));
+overflow:hidden;
+box-shadow:0 6px 20px rgba(99,102,241,0.18);
+background-size: 400% 400%;
+animation: headerGradient 8s ease infinite;
+}
+@keyframes headerGradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+header nav{
+position:absolute;
+top:18px;
+right:20px;
+display:flex;
+gap:14px;
+align-items:center;
+}
+header nav a{
+color:rgba(255,255,255,0.95);
+text-decoration:none;
+font-weight:600;
+padding:8px 12px;
+border-radius:8px;
+transition:all .18s ease;
+}
+header nav a:hover{ transform:translateY(-3px); opacity:0.98; }
+header h1{ font-size:2.4rem; margin:0 0 8px; letter-spacing:0.6px; text-shadow:0 6px 18px rgba(0,0,0,0.12); opacity:0; transform: translateY(20px); animation: fadeSlideUp 0.8s forwards 0.3s; }
+header p{ margin:0 auto; max-width:820px; opacity:0; transform: translateY(20px); animation: fadeSlideUp 0.8s forwards 0.5s; }
+hr.header-sep{width:56%; margin:22px auto 0; border:0; height:3px; border-radius:3px; background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5)); opacity:0; transform: translateY(20px); animation: fadeSlideUp 0.8s forwards 0.7s; }
+main{ padding:44px 6%; max-width:1100px; margin:0 auto; }
+.info-row{ display:grid; grid-template-columns: repeat(2, 1fr); gap:24px; margin-bottom:34px; }
+.card{
+background:var(--card-bg);
+backdrop-filter: blur(10px);
+border-radius:16px;
+padding:26px;
+box-shadow:0 8px 30px rgba(16,24,40,0.06);
+opacity:0;
+transform: translateY(30px);
+animation: fadeSlideUp 0.8s forwards;
+}
+.card:nth-child(1){ animation-delay: 0.3s; }
+.card:nth-child(2){ animation-delay: 0.5s; }
+.card:nth-child(3){ animation-delay: 0.7s; }
+.card h2{ margin-top:0; color:var(--purple-1); font-size:1.25rem; }
+.card p, .card ul{ margin:12px 0 0; line-height:1.6; color:var(--text); }
+ul.plain{ padding-left:18px; }
+ul.plain li{ margin-bottom:8px; }
+.team-wrap{ margin-top:6px; opacity:0; transform: translateY(30px); animation: fadeSlideUp 0.8s forwards 0.9s; }
+.team-intro{ text-align:center; margin:18px 0 28px; color:#374151; }
+.team-grid{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap:20px;
+}
+.member{
+background:var(--card-bg);
+backdrop-filter: blur(10px);
+border-radius:14px;
+padding:18px;
+text-align:center;
+box-shadow:0 6px 18px rgba(16,24,40,0.06);
+transition: transform .22s ease, box-shadow .22s ease;
+opacity:0;
+transform: translateY(30px);
+animation: fadeSlideUp 0.8s forwards;
+}
+.member:nth-child(1){ animation-delay: 1.0s; }
+.member:nth-child(2){ animation-delay: 1.2s; }
+.member:nth-child(3){ animation-delay: 1.4s; }
+.member:nth-child(4){ animation-delay: 1.6s; }
+.member:nth-child(5){ animation-delay: 1.8s; }
+.member:nth-child(6){ animation-delay: 2.0s; }
+.member:hover{ transform:translateY(-6px); box-shadow:0 14px 40px rgba(99,102,241,0.18); }
+.avatar{ width:84px; height:84px; margin:0 auto 12px; display:block; }
+.member h3{ margin:8px 0 6px; color:var(--purple-2); font-size:1.05rem; }
+.member p{ margin:0; font-size:0.92rem; color:#374151; line-height:1.5 }
+footer{ margin-top:44px; padding:24px 20px; text-align:center; background:linear-gradient(90deg,var(--purple-1),var(--purple-2)); color:#fff; }
+@keyframes fadeSlideUp{
+0%{ opacity:0; transform: translateY(30px);}
+100%{ opacity:1; transform: translateY(0);}
+}
+@media (max-width:880px){
+.info-row{ grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="veb_smrvt.htm">Главная</a>
+<a href="veb_vhod.htm" target="_blank">Вход</a>
+<a href="veb_registratsiya.htm" target="_blank">Регистрация</a>
+</nav>
+<h1>Команда проекта «Путь Саморазвития»</h1>
+<hr class="header-sep" />
+<p>Мы — небольшая, но сплочённая команда практиков, психологов и разработчиков, которые делают самопомощь доступной, понятной и эффективной.</p>
+</header>
+<main>
+<div class="info-row">
+<section class="card">
+<h2>Наша миссия</h2>
+<p>Помочь людям выстроить устойчивый путь личного роста — через практики, статьи и полезные материалы. Мы верим: развитие может быть красивым, последовательным и радостным.</p>
+</section>
+<section class="card">
+<h2>Чем мы занимаемся</h2>
+<ul class="plain">
+<li>Разрабатываем микро-привычки и практики для ежедневного роста</li>
+<li>Публикуем статьи, аудио и видео с практическими советами</li>
+<li>Помогаем ставить личные цели и отслеживать прогресс</li>
+</ul>
+</section>
+</div>
+<section class="card">
+<h2>О нашей команде</h2>
+<p>Команда состоит из психологов, коучей, авторов контента и разработчиков. Каждый привносит свой опыт и экспертизу, чтобы создать понятный и поддерживающий продукт для пользователей. Мы ценим качество, честность и практическую пользу каждого материала.</p>
+</section>
+<div class="team-wrap">
+<div class="team-intro">
+<h2 style="margin:0;color:var(--purple-2)">Наши специалисты</h2>
+<p style="margin:8px 0 0;color:#4b5563">Коротко о каждом: роль и чем может помочь пользователю.</p>
+</div>
+<div class="team-grid">
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Анеля">
+<defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g1)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="40" fill="#fff" text-anchor="middle" font-weight="700">А</text>
+</svg>
+<h3>Анеля</h3>
+<p>Основатель проекта, автор материалов по психологии и мотивации.</p>
+</div>
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Алуа">
+<defs><linearGradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g2)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="36" fill="#fff" text-anchor="middle" font-weight="700">А</text>
+</svg>
+<h3>Алуа</h3>
+<p>Технический специалист, отвечает за платформу и инструменты для пользователей.</p>
+</div>
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Дильназ">
+<defs><linearGradient id="g3" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#5b21b6"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g3)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="30" fill="#fff" text-anchor="middle" font-weight="700">Д</text>
+</svg>
+<h3>Дильназ</h3>
+<p>Коуч и консультант по мотивации, помогает формировать привычки и уверенность.</p>
+</div>
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Димаш">
+<defs><linearGradient id="g4" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g4)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="30" fill="#fff" text-anchor="middle" font-weight="700">Д</text>
+</svg>
+<h3>Димаш</h3>
+<p>Коуч по личностному росту, помогает ставить реалистичные цели и достигать их.</p>
+</div>
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Диас">
+<defs><linearGradient id="g5" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g5)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="700">Д</text>
+</svg>
+<h3>Диас</h3>
+<p>Эксперт по привычкам и продуктивности, работает с системами отслеживания прогресса.</p>
+</div>
+<div class="member">
+<svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Жанель">
+<defs><linearGradient id="g6" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+<circle cx="50" cy="50" r="48" fill="url(#g6)"/>
+<text x="50" y="56" font-family="Poppins, Arial" font-size="28" fill="#fff" text-anchor="middle" font-weight="700">Ж</text>
+</svg>
+<h3>Жанель</h3>
+<p>Психолог по эмоциональному интеллекту, помогает строить осознанные отношения с собой и окружающими.</p>
+</div>
+</div>
+</div>
+</main>
+<footer>
+© 2025 Путь Саморазвития — команда практиков по личностному росту
+</footer>
+</body>
+</html>
